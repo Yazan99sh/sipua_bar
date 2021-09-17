@@ -9,7 +9,7 @@ And implemented by me
 
 navigation bar
 
-## Screen Shoot
+## ScreenShot
 ###Photo
 ![Sipua Bar View](https://yazanshmo.000webhostapp.com/assets/Screenshot_1631883212.png)
 ###GIF 

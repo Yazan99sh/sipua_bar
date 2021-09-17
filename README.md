@@ -14,7 +14,7 @@ navigation bar
 ![Sipua Bar View](https://yazanshmo.000webhostapp.com/assets/Screenshot_1631883212.png)
 ###GIF 
 If it not that good because of android studio bad emulator
-![Sipua Bar Gif](https://yazanshmo.000webhostapp.com/assets/sipua_bar.gif)
+![Sipua Bar Gif](https://yazanshmo.000webhostapp.com/assets/video_2021-09-17_18-39-53.gif)
 ## Usage
 
 Main classes:
@@ -69,8 +69,10 @@ Please feel free to ask any questions about this package. By contact us on Teleg
  
 * Sipua UI & UX Designer   
 [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/sipuaa)
+[![Gmail](https://img.shields.io/badge/gmail-Abdulkader.attoura-yellow)](mailto:Abdulkader.attoura@gmail.com?)
 * Yazan Shekh Mohammed Developer   
-  [![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/YA1999ZAN)
+[![Telegram](https://img.shields.io/badge/chat-on%20Telegram-blue.svg)](https://t.me/YA1999ZAN)
+[![Gmail](https://img.shields.io/badge/gmail-yazan.shekh.mohammed-red)](mailto:yazan.shekh.mohammed@gmail.com?)
 
 ## License
 

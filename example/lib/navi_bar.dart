@@ -75,8 +75,12 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
    WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
        try{
          RenderBox render = _keys[currentIndex].currentContext?.findRenderObject() as RenderBox;
-
          initialOffset = render.localToGlobal(Offset.zero);
+         if (initialOffset != null) {
+           initialOffset = Offset(initialOffset!.dx - 4,initialOffset!.dy);
+         }
+         setState(() {
+         });
        }
        catch(e){
          print(e);
@@ -103,7 +107,7 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
             children: [
               AnimatedPositioned(
                 left:initialOffset?.dx??0,
-                duration: animationDuration,
+                duration:firstUse ?Duration(milliseconds: 1): animationDuration,
                 curve: Curves.easeInOut,
                 child: Container(
                   decoration: BoxDecoration(
@@ -167,6 +171,9 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
                 print(render.semanticBounds.center);
                 print(render.localToGlobal(Offset.zero));
                 initialOffset = render.localToGlobal(Offset.zero);
+                if (initialOffset != null) {
+                  initialOffset = Offset(initialOffset!.dx - 4,initialOffset!.dy);
+                }
               }
               catch(e){
                 print(e);

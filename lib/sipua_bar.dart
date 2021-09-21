@@ -71,7 +71,7 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
   Offset? initialOffset;
   late Widget itemBuilder;
   late bool firstUse;
-
+  late double off;
   @override
   void initState() {
     currentIndex = widget.currentIndex;
@@ -89,10 +89,15 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
     firstUse = true;
     WidgetsBinding.instance?.addPostFrameCallback((timeStamp) {
       try{
+        if(firstUse){
+          _keys.forEach((element) {
+            itemSize.add(element.currentContext?.size??Size(0,0));
+          });
+        }
         RenderBox render = _keys[currentIndex].currentContext?.findRenderObject() as RenderBox;
-        initialOffset = render.localToGlobal(Offset.zero);
+        initialOffset = render.localToGlobal(Offset.fromDirection(1,-16));
         if (initialOffset != null) {
-          initialOffset = Offset(initialOffset!.dx - 4,initialOffset!.dx);
+          initialOffset = Offset(initialOffset!.dx,initialOffset!.dx);
         }
         setState(() {
         });
@@ -121,39 +126,16 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
           child: Stack(
             children: [
               AnimatedPositioned(
-                left:initialOffset!.dx,
+                left:initialOffset?.dx ?? 0,
                 duration:firstUse ?Duration(milliseconds: 1): animationDuration,
                 curve: Curves.easeInOut,
                 child: Container(
+                  height:itemSize.isEmpty ? 10:itemSize[currentIndex].height,
+                  width:itemSize.isEmpty?10:itemSize[currentIndex].width,
                   decoration: BoxDecoration(
                     color: cursorColor,
                     borderRadius: cursorRadius ??
                         BorderRadius.vertical(top: Radius.circular(18)),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.only(left:8.0,right: 8.0),
-                    child: Opacity(
-                      opacity: 0,
-                      child: Flex(
-                        direction: Axis.vertical,
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          SizedBox(
-                            height: 16,
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(
-                                right: 16.0, left: 16, bottom: 8),
-                            child: Icon(
-                              Icons.circle,
-                              size: 30,
-                            ),
-                          ),
-                          SizedBox(height: 32,),
-                        ],
-                      ),
-                    ),
                   ),
                 ),
               ),
@@ -180,14 +162,10 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
               currentIndex = element.index;
               firstUse = false;
               try{
-                // print(element.index);
-                // print(_keys[element.index]);
                 RenderBox render = _keys[element.index].currentContext?.findRenderObject() as RenderBox;
-                // print(render.semanticBounds.center);
-                // print(render.localToGlobal(Offset.zero));
-                initialOffset = render.localToGlobal(Offset.zero);
+                initialOffset = render.localToGlobal(Offset.fromDirection(1,-16));
                 if (initialOffset != null) {
-                  initialOffset = Offset(initialOffset!.dx - 4,initialOffset!.dx);
+                  initialOffset = Offset(initialOffset!.dx,initialOffset!.dx);
                 }
               }
               catch(e){
@@ -250,9 +228,11 @@ class _SipuaNavigationBarState extends State<SipuaNavigationBar> {
           ),
         ),
       );
+      // barItems.add(SizedBox(width: 4,));
     }
     return barItems;
   }
+  List<Size> itemSize = [];
 }
 
 class SipuaItem {

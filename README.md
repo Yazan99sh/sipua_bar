@@ -10,10 +10,10 @@ And implemented by me
 navigation bar
 
 ## ScreenShot
-###Photo
+**Photo**
+
 ![Sipua Bar View](https://yazanshmo.000webhostapp.com/assets/Screenshot_1631883212.png)
-###GIF 
-If it not that good because of android studio bad emulator
+***GIF***
 ![Sipua Bar Gif](https://yazanshmo.000webhostapp.com/assets/video_2021-09-17_18-39-53.gif)
 ## Usage
 
@@ -51,7 +51,7 @@ Add `sipua_bar` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  sipua_bar: ^0.0.1
+  sipua_bar: ^0.0.2
 ```
 
 ## Changelog

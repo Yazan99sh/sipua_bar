@@ -15,13 +15,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
-  bubbled_navigation_bar:
-    dependency: "direct main"
-    description:
-      name: bubbled_navigation_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.4"
   characters:
     dependency: transitive
     description:
@@ -64,13 +57,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0"
-  fancy_bar:
-    dependency: "direct main"
-    description:
-      name: fancy_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.0"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -102,6 +88,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+  sipua_bar:
+    dependency: "direct main"
+    description:
+      name: sipua_bar
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -165,3 +158,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"

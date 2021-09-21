@@ -2,8 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:idea_hub/home_module/state/home_state.dart';
 import 'package:idea_hub/main.dart';
-import 'package:idea_hub/navi_bar.dart';
-
+import 'package:sipua_bar/sipua_bar.dart';
 class HomeStartState extends HomeState {
   HomeStartState(HomeScreenState screenState) : super(screenState);
 

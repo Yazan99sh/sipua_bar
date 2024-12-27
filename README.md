@@ -12,9 +12,9 @@ navigation bar
 ## ScreenShot
 **Photo**
 
-![Sipua Bar View](https://yazanshmo.000webhostapp.com/assets/Screenshot_1631883212.png)
+![Sipua Bar View](https://yazanmohamed.me/Thumbnail/sipua_bar_i.png)
 ***GIF***
-![Sipua Bar Gif](https://yazanshmo.000webhostapp.com/assets/video_2021-09-17_18-39-53.gif)
+![Sipua Bar Gif](https://yazanmohamed.me/Thumbnail/sipua_bar_g.gif)
 ## Usage
 
 Main classes:
@@ -51,7 +51,7 @@ Add `sipua_bar` to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  sipua_bar: ^0.0.2
+  sipua_bar: ^0.0.3
 ```
 
 ## Changelog

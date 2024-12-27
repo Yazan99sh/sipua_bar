@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:idea_hub/home_module/state/home_state.dart';
 import 'package:idea_hub/main.dart';
 import 'package:sipua_bar/sipua_bar.dart';
+
 class HomeStartState extends HomeState {
   HomeStartState(HomeScreenState screenState) : super(screenState);
 
@@ -39,12 +40,12 @@ class HomeStartState extends HomeState {
           SipuaItem(label: 'Home', icon: Icons.home_rounded),
           SipuaItem(label: 'Tips', icon: Icons.opacity_rounded),
           SipuaItem(label: 'Ideas', icon: Icons.lightbulb_rounded),
-          SipuaItem(label: 'Book', icon: Icons.book_rounded),
+          SipuaItem(label: 'Books', icon: Icons.book_rounded),
         ],
         onItemSelected: (int) {},
         unselectedContent: Colors.white,
         animationDuration: Duration(milliseconds: 350),
-        backgroundColor:Color.fromRGBO(238, 255, 132, 1),
+        backgroundColor: Color.fromRGBO(238, 255, 132, 1),
       ),
     );
   }
@@ -116,13 +117,15 @@ Widget home(BuildContext context) {
         Container(
           height: 44,
           width: 120,
-          child: RaisedButton(
-            elevation: 0,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+          child: ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.grey[850],
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
             ),
             onPressed: () {},
-            color: Colors.grey[850],
             child: Text(
               'Start Now',
               style: TextStyle(color: Colors.white, fontSize: 25),
